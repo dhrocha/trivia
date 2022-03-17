@@ -7,7 +7,9 @@ export default function MainScreen({ setLoadedModule }) {
   return (
     <MiddleSection>
       <Title text="Welcome to the Trivia Challenge!" />
-      <Text text="You will be presented with 10 True or False questions. Can you score 100%?" />
+      <Text
+        text={`You will be presented with ${process.env.REACT_APP_TOTAL_QUESTIONS} True or False questions. Can you score 100%?`}
+      />
       <Text text="" />
     </MiddleSection>
   );

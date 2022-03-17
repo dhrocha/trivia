@@ -28,7 +28,7 @@ export default function Trivia({ setLoadedModuleName }) {
     setLoading(true);
     try {
       const req = await axios.get(
-        "https://opentdb.com/api.php?amount=10&difficulty=hard&type=boolean"
+        `https://opentdb.com/api.php?amount=${process.env.REACT_APP_TOTAL_QUESTIONS}&difficulty=${process.env.REACT_APP_DIFICULTY}&type=boolean`
       );
       const result = req.data.results.map((item) => {
         return {
